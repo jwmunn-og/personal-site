@@ -1,0 +1,30 @@
+---
+layout: archive
+title: My New Working Site
+permalink: thoughts/
+comments: true
+---
+
+<div id="home">
+  <div class="wrapper s-padinfull m-padinfull l-padinfull">
+  	<h1 class="page-title text-center">All <span class="th-lig">Th</span>oughts</h1>
+  	<div  class="m1-m2 l1-l2 s-padinfull l-padin">
+  		<ul class="archive">
+  		  {% for post in site.posts %}
+  		    <li>
+  		    	<a class="post-title" href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp; &nbsp;<span class="post-date">{{ post.date | date_to_string }}</span>
+  				{{ post.excerpt }}
+  				<hr>
+  		    </li>
+  		  {% endfor %}
+  		</ul>
+  	</div>
+  	<aside class="posts s-all m3-m4 l3-l4 l-padin">
+  		<figure>
+  			<img src="/images/thought-books.jpg" alt="" />
+  		</figure>
+  		<h3 id="blog-bio" class="l-padinfull">Wait, Isn&rsquo;t this just a blog?</h3>
+  		<p class="caption l-padinfull">Ding Ding Ding! I&rsquo;m glad you found it too. I like the impermanence of thoughts: the way they grow, expand, change direction and jump around just like these posts. My goal in this piddly collection of words is to work things out and seek understanding. In this there will be no end, that I can think&nbsp;of.</p>
+  	</aside>
+  </div>
+</div>

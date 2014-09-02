@@ -3,11 +3,59 @@ layout: default
 title: My New Working Site
 ---
 
-<div id="home">
-  <h1>Blog Posts Test 1 2</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+		<section id="top">
+			<div class="wrapper s-padinfull m-padinfull">
+				<article class="s-all m-all l-all">
+						<div id="name-wrapper">
+							<h1 id="name" class="animated zoomInRight">Justin W Munn</h1>
+							<h2 id="tagline" class="animated zoomInLeft">Design &amp; Code</h2>
+						</div>
+					<figure>
+						<img src="images/watercolor-sketch.jpg" alt="Octopus Computer drawing" />
+					</figure>
+					<p class="blurb l-padin">
+						A code-savvy designer and nomad from Raleigh, NC.
+					</p>
+				</article>
+			</div>
+		</section>
+		<section>
+			<div class="wrapper s-padinfull m-padinfull l-padinfull">
+				<article class="s-all m1-m2 l1-l2 s-padinfull l-padin">
+				<h2 class="homepage-heading">Latest Thought</h2>
+					{% assign post = site.posts.first %}
+					{% assign content = post.content %}
+					{% include post_detail.html %}
+					<a href="{{ root_url }}{{ post.url }}" class="button-text"><span class="button">Read Thought</span></a>
+				</article>
+				<article class="s-all m3-m4 l3-l4 s-padinfull">
+					<h2 class="homepage-heading">Latest Project</h2>
+					<div class="postthumb odd"> 
+					  <a href="case-study.html">
+					  	<img src="images/eridanicrops.jpg" alt="" title=""/>
+					  	<div class="overlay">
+					  		<figcaption>
+					  			Eridani Crops
+					  		</figcaption>
+					  	</div></a>
+					</div>
+					<!--
+<figure>
+						<img src="images/eridanicrops.jpg" alt="Octopus Computer drawing" />
+					</figure>
+-->
+					<!-- <a href="#" class="button-text"><span class="button">See Project</span></a> -->
+				</article>
+			</div>				
+		</section>
+		<section>
+			<div class="wrapper s-padinfull m-padinfull l-padinfull">
+				<article id="contact-bottom" class="s-all m-all l-all s-padin m-padinfull s-padinfull">
+					<h1 class="work">Want to work together?</h1>
+					<p class="work-pitch">
+						Have an idea and need some design, logo, or illustration work done? <em>You&rsquo;re in the right place.</em> Need a custom new website or just to breathe new life into an existing one? <em>I&rsquo;m your man.</em> <span class="line-break">Want to grab a beer? <em>Now we're talking!</em></span>
+					</p>
+						<a href="contact.html" class="button-text"><span class="button-center">Let&rsquo;s Get Started</span></a>
+				</article>
+			</div>
+		</section>
