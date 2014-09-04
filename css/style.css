@@ -396,7 +396,7 @@ ul, li {
   border-bottom: none;
   font-family: "ProximaNovaA-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.54688em;
-  line-height: 1.47727;
+  line-height: 1;
   font-weight: normal;
   color: #fafafa;
   margin: 0; }
@@ -404,7 +404,7 @@ ul, li {
     .overlay figcaption {
       font-size: 1.6875em;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .overlay figcaption {
       font-size: 1.96875em;
       line-height: 1.625; } }
@@ -701,7 +701,7 @@ p, ul, input[type=text], input[type=email], textarea {
     p, ul, input[type=text], input[type=email], textarea {
       font-size: 1.125rem;
       line-height: 1.7875; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     p, ul, input[type=text], input[type=email], textarea {
       font-size: 1.40625rem;
       line-height: 1.7875; } }
@@ -720,7 +720,7 @@ label {
     label {
       font-size: 1.125rem;
       line-height: 1.7875; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     label {
       font-size: 1.40625rem;
       line-height: 1.7875; } }
@@ -741,7 +741,7 @@ label {
 
 h1, h2, .serif {
   font-family: "Bookmania-Semibold", Georgia, serif;
-  font-weight: 100;
+  font-weight: normal;
   color: #f6871f;
   -moz-font-feature-settings: "ss01" 1, "ss02" 1, "ss04" 1;
   -moz-font-feature-settings: "ss01=1, ss02=1, ss04=1";
@@ -757,7 +757,7 @@ h1 {
     h1 {
       font-size: 3.16688rem;
       line-height: 1.4625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     h1 {
       font-size: 3.375rem;
       line-height: 1.365; } }
@@ -765,8 +765,7 @@ h1 {
 h2 {
   font-family: "ProximaNovaA-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.82813rem;
-  line-height: 1.5;
-  margin-top: 0.72222em; }
+  line-height: 1.5; }
   h2#colophon {
     font-family: "Bookmania-Semibold", Georgia, serif; }
     h2#colophon:first-letter {
@@ -778,9 +777,10 @@ h2 {
       font-feature-settings: "salt" 1; }
   @media only screen and (min-width: 48em) {
     h2 {
+      margin-top: 0.72222em;
       font-size: 2.25rem;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     h2 {
       font-size: 2.53125rem;
       line-height: 1.625; } }
@@ -796,7 +796,7 @@ h3 {
     h3 {
       font-size: 1.6875rem;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     h3 {
       font-size: 1.96875rem;
       line-height: 1.625; } }
@@ -813,7 +813,7 @@ h4 {
     h4 {
       font-size: 1.26563rem;
       line-height: 1.58889; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     h4 {
       font-size: 1.26563rem;
       line-height: 1.58889; } }
@@ -827,7 +827,7 @@ blockquote, .intro {
     blockquote, .intro {
       font-size: 1.40625rem;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     blockquote, .intro {
       font-size: 1.6875rem;
       line-height: 1.89583; } }
@@ -839,7 +839,7 @@ blockquote, .intro {
     .page-title {
       font-size: 4.01063rem;
       line-height: 1.4625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .page-title {
       font-size: 4.5rem;
       line-height: 1.625; } }
@@ -847,13 +847,13 @@ blockquote, .intro {
 .blurb {
   font-family: "ProximaNovaA-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
-  font-size: 1.82813rem;
+  font-size: 1.54688rem;
   line-height: 1.5; }
   @media only screen and (min-width: 48em) {
     .blurb {
       font-size: 2.25rem;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .blurb {
       font-size: 2.53125rem;
       line-height: 1.625; } }
@@ -871,7 +871,7 @@ blockquote p {
     blockquote p {
       font-size: 1.6875rem;
       line-height: 1.89583; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     blockquote p {
       font-size: 1.6875rem;
       line-height: 1.89583; } }
@@ -882,7 +882,7 @@ a {
   a:hover {
     color: #df5711;
     border-bottom: 1px solid #df5711;
-    transition: all .2s ease; }
+    transition: color .2s ease; }
 
 li a, figure a {
   border: none; }
@@ -897,7 +897,7 @@ li a, figure a {
       line-height: 1.625;
       width: 90%;
       margin: 0 auto; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .elevator-pitch {
       font-size: 1.96875rem;
       line-height: 1.625;
@@ -910,15 +910,25 @@ p {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0; }
 
+article {
+  padding-bottom: 0.72222em; }
+  @media only screen and (min-width: 48em) {
+    article {
+      padding-bottom: 0; } }
+
 input {
   margin-bottom: 1.44444em; }
 
 .work {
   font-family: "ProximaNovaA-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.3;
+  line-height: 1;
   color: #f6871f;
-  margin-top: 0.72222em;
+  margin: 0.48148em 0;
   text-align: center; }
+  @media only screen and (min-width: 48em) {
+    .work {
+      line-height: 1.3;
+      margin-top: 0.72222em; } }
 
 .work-pitch {
   text-align: center; }
@@ -926,7 +936,7 @@ input {
     .work-pitch {
       width: 90%;
       margin: 0 auto; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .work-pitch {
       width: 80%;
       margin: 0 auto; } }
@@ -938,7 +948,7 @@ input {
     .work-pitch-secondary {
       width: 70%;
       margin: 0 auto; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .work-pitch-secondary {
       width: 70%;
       margin: 0 auto; } }
@@ -984,7 +994,7 @@ input {
     .footer-text {
       font-size: 1.125rem;
       padding-top: 0; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .footer-text {
       font-size: 1.125rem; } }
 
@@ -1047,7 +1057,7 @@ body {
   height: auto;
   max-width: 80em;
   position: relative; }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .wrapper {
       margin: 0 auto; } }
 
@@ -1070,13 +1080,12 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%; }
 
-::selection {
-  background: #00b7e4;
-  /* color: $light-color; */ }
-
 ::-moz-selection {
-  background-color: #f6871f;
+  background-color: #00b7e4;
   color: #fafafa; }
+
+::selection {
+  background: #00b7e4; }
 
 img {
   max-width: 100%; }
@@ -1086,6 +1095,17 @@ figure {
 
 #personal-image {
   margin: 0 auto; }
+
+p a:hover, h3 a:hover {
+  color: #df5711;
+  border-bottom: 1px solid #df5711;
+  transition: color .2s ease; }
+p a:active, h3 a:active {
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+  transform: translateY(2px); }
 
 .work figure {
   margin-bottom: 2%; }
@@ -1104,7 +1124,7 @@ nav {
       float: right;
       width: auto;
       position: static; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     nav {
       display: inline-block; } }
 
@@ -1169,13 +1189,12 @@ ul.nav {
             color: #00cafc;
             border: 0; }
         ul.nav li:active {
-          -webkit-transform: translate(0px, 2px);
-          -moz-transform: translate(0px, 2px);
-          -ms-transform: translate(0px, 2px);
-          -o-transform: translate(0px, 2px);
-          transform: translate(0px, 2px);
-          transition: transform 0.2s ease-out; } }
-    @media only screen and (min-width: 69em) {
+          -webkit-transform: translateY(2px);
+          -moz-transform: translateY(2px);
+          -ms-transform: translateY(2px);
+          -o-transform: translateY(2px);
+          transform: translateY(2px); } }
+    @media only screen and (min-width: 68em) {
       ul.nav li {
         font-size: 2.8125rem;
         line-height: 1.625;
@@ -1183,14 +1202,15 @@ ul.nav {
     @media only screen and (min-width: 48em) {
       ul.nav li:first-child {
         margin-left: 0; } }
-    @media only screen and (min-width: 48em) {
-      ul.nav li:last-child {
-        margin-right: 0; } }
     ul.nav li a {
       text-decoration: none;
       color: #00b7e4;
       width: 100%;
       height: 100%; }
+
+@media only screen and (min-width: 48em) {
+  .last {
+    margin-right: 0; } }
 
 label {
   display: block; }
@@ -1215,8 +1235,10 @@ nav a#pull {
   float: right;
   margin-right: 0.90278em;
   font-family: "ProximaNovaA-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.54688rem;
+  font-size: 1.125rem;
   background: #fafafa;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   line-height: 1.47727;
   text-decoration: none;
   color: #00b7e4;
@@ -1236,13 +1258,17 @@ nav a#pull {
 
 #logo {
   float: left;
-  width: 25%;
+  width: 30%;
   margin-top: -8%;
   margin-bottom: 0.48148em; }
   @media only screen and (min-width: 48em) {
     #logo {
       width: 18%;
       margin-top: -5%; } }
+  @media only screen and (min-width: 68em) {
+    #logo {
+      width: 16%;
+      padding-right: 5px; } }
   #logo:hover {
     border: 0;
     -webkit-transform: translate(0px, 5px);
@@ -1261,7 +1287,7 @@ nav a#pull {
   @media only screen and (min-width: 48em) {
     #name-wrapper {
       width: 98%; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     #name-wrapper {
       width: 80%;
       margin: 0 auto; } }
@@ -1274,15 +1300,18 @@ nav a#pull {
   -webkit-animation-duration: .5s; }
 
 #contact-bottom {
-  margin-top: 5.77778em;
+  margin-top: 1.44444em;
   border-top: 1px solid #a6a8aa; }
+  @media only screen and (min-width: 48em) {
+    #contact-bottom {
+      margin-top: 5.77778em; } }
 
 .button-text, a.button-text {
   color: #fafafa;
   font-family: "ProximaNovaA-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 200;
+  font-weight: normal;
   font-size: 1.125rem;
   text-decoration: none;
   width: 100%;
@@ -1337,7 +1366,7 @@ textarea {
         -ms-transform: translate(0px, 1px);
         -o-transform: translate(0px, 1px);
         transform: translate(0px, 1px); } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .button, .button-center {
       width: 15em;
       float: left;
@@ -1361,7 +1390,7 @@ ul.social {
     ul.social {
       width: 100%;
       margin-top: 0.72222em; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     ul.social {
       width: 100%; } }
 
@@ -1388,7 +1417,7 @@ ul.about-icons {
     ul.about-icons {
       width: 100%;
       margin-top: 0.72222em; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     ul.about-icons {
       width: 100%; } }
 
@@ -1397,7 +1426,7 @@ ul.about-icons {
   text-align: center;
   width: 50%; }
 
-@media only screen and (min-width: 69em) {
+@media only screen and (min-width: 68em) {
   .work-pad {
     padding-top: 2.88889em;
     margin-top: 8em; } }
@@ -1421,13 +1450,14 @@ ul.about-icons {
       color: #00cafc; } }
 
 .project-title {
+  line-height: 1;
   margin-top: 0;
   text-align: center;
   font-family: "ProximaNovaA-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .prev-project a, .next-project a {
   padding: 0 0 0; }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .prev-project a, .next-project a {
       padding: 0 0 2.88889em 0; } }
 
@@ -1476,7 +1506,7 @@ form {
   @media only screen and (min-width: 48em) {
     .pad-top {
       padding-top: 2.88889em; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .pad-top {
       padding-top: 4.33333em; } }
 
@@ -1496,7 +1526,7 @@ form {
     .post-date {
       font-size: 1.6875rem;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .post-date {
       font-size: 1.96875rem;
       line-height: 1.625; } }
@@ -1510,7 +1540,7 @@ form {
     .post-title {
       font-size: 2.25rem;
       line-height: 1.625; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 68em) {
     .post-title {
       font-size: 2.53125rem;
       line-height: 1.625; } }
@@ -1527,17 +1557,25 @@ form {
 .homepage-heading {
   color: #00b7e4; }
 
-.arrow {
+.arrow-right, .arrow-left {
   font-size: inherit;
   color: #a6a8aa;
   padding: 0 0.36111em; }
 
-h3:hover span.arrow {
+h3:hover span.arrow-right {
   -webkit-transform: translate(-2px, 0px);
   -moz-transform: translate(-2px, 0px);
   -ms-transform: translate(-2px, 0px);
   -o-transform: translate(-2px, 0px);
   transform: translate(-2px, 0px);
+  transition: transform 0.2s ease-out; }
+
+h3:hover span.arrow-left {
+  -webkit-transform: translate(2px, 0px);
+  -moz-transform: translate(2px, 0px);
+  -ms-transform: translate(2px, 0px);
+  -o-transform: translate(2px, 0px);
+  transform: translate(2px, 0px);
   transition: transform 0.2s ease-out; }
 
 #things {

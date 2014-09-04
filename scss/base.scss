@@ -43,14 +43,13 @@ html[xmlns] .clearfix {
     height: 1%;
 }
 
-::selection {
-	background: $primary-color;
-	/* color: $light-color; */
+::-moz-selection {
+	background-color: $primary-color;
+	color: $light-color;
 }
 
-::-moz-selection {
-	background-color: $secondary-color;
-	color: $light-color;
+::selection {
+	background: $primary-color;
 }
 
 img {max-width: 100%;}
@@ -59,6 +58,21 @@ figure { text-align: center; }
 
 #personal-image {
 	margin: 0 auto;
+}
+
+p a, h3 a {
+	&:hover {
+		color: $secondary-highlight;
+		border-bottom: 1px solid $secondary-highlight;
+		transition: color .2s ease;
+		}
+	&:active {
+        -webkit-transform: translateY(2px);
+	    -moz-transform:    translateY(2px);
+	    -ms-transform:     translateY(2px);
+	    -o-transform:      translateY(2px);
+	    transform:         translateY(2px);
+    }
 }
 
 .work figure { margin-bottom: 2%; }
@@ -146,12 +160,11 @@ ul.nav {
 		        }
 	        }
 	        &:active {
-		        -webkit-transform: translate(0px, 2px);
-			    -moz-transform:    translate(0px, 2px);
-			    -ms-transform:     translate(0px, 2px);
-			    -o-transform:      translate(0px, 2px);
-				transform: translate(0px, 2px);
-				transition: transform 0.2s ease-out;
+		        -webkit-transform: translateY(2px);
+			    -moz-transform:    translateY(2px);
+			    -ms-transform:     translateY(2px);
+			    -o-transform:      translateY(2px);
+			    transform:         translateY(2px);
 	        }
 		}
 		@include responsive(large-screens) {
@@ -164,12 +177,6 @@ ul.nav {
 		        	margin-left:0;
 				}
 			}
-			
-			&:last-child {
-				@include responsive(medium-screens) {
-		        	margin-right:0;
-				}
-			}
 		
 		a {
 			text-decoration: none;
@@ -178,6 +185,12 @@ ul.nav {
 	        height: 100%;
 			
 		}
+	}
+}
+
+.last {
+	@include responsive(medium-screens) {
+    	margin-right:0;
 	}
 }
 
@@ -205,8 +218,10 @@ nav a#pull {
     float: right;
     margin-right: $scale * 5 / 8;
 	font-family: $font-sans-bold;
-	font-size: $base-font-size * 1.375;
+	font-size: $base-font-size;
 	background: $light-color;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 	line-height: $line-height-scale * 1.13636364;
 	text-decoration: none;
 	color: $primary-color;
@@ -226,12 +241,16 @@ nav a#pull {
 
 #logo {
 	float: left;
-	width: 25%;
+	width: 30%;
 	margin-top: -8%;
 	margin-bottom: $scale / 3;
 	@include responsive(medium-screens) {
     	width:18%;
     	margin-top: -5%;
+	}
+	@include responsive (large-screens){
+		width:16%;
+		padding-right: 5px;
 	}
 	&:hover {
 		border: 0;
@@ -270,8 +289,11 @@ nav a#pull {
 }
 
 #contact-bottom {
-	margin-top: $scale * 4;
+	margin-top: $scale;
 	border-top: 1px solid $neutral;
+	@include responsive(medium-screens) {
+    	margin-top: $scale * 4;
+	}
 }
 
 .button-text, a.button-text {
@@ -279,7 +301,7 @@ nav a#pull {
 	font-family: $font-sans;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 200;
+	font-weight: normal;
 	font-size: $base-font-size;
 	text-decoration: none;
 	width: 100%;
@@ -434,6 +456,7 @@ ul.about-icons {
 }
 
 .project-title {
+	line-height: 1;
 	margin-top: 0;
 	text-align: center;
 	font-family: $font-sans-bold;
@@ -559,18 +582,27 @@ form { display: block;}
 	color: $primary-color;
 }
 
-.arrow {
+.arrow-right, .arrow-left {
 	font-size: inherit;
 	color: $neutral;
 	padding: 0 ($scale / 4);
 }
 
-h3:hover span.arrow{
+h3:hover span.arrow-right {
 		-webkit-transform: translate(-2px, 0px);
 	    -moz-transform:    translate(-2px, 0px);
 	    -ms-transform:     translate(-2px, 0px);
 	    -o-transform:      translate(-2px, 0px);
 		transform: 		   translate(-2px, 0px);
+		transition: transform 0.2s ease-out;
+}
+
+h3:hover span.arrow-left {
+		-webkit-transform: translate(2px, 0px);
+	    -moz-transform:    translate(2px, 0px);
+	    -ms-transform:     translate(2px, 0px);
+	    -o-transform:      translate(2px, 0px);
+		transform: 		   translate(2px, 0px);
 		transition: transform 0.2s ease-out;
 }
 

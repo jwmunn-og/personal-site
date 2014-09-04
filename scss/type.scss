@@ -172,7 +172,7 @@ label {
 
 h1, h2, .serif {
 	font-family: $font-serif-semibold;
-	font-weight: 100;
+	font-weight: normal;
 	color: $secondary-color;
 	@include opentype-style;
 }
@@ -194,7 +194,6 @@ h2 {
 	font-family: $font-sans-bold;
 	font-size: $base-font-size * 1.625;
 	line-height: $line-height-scale * 1.15384615;
-	margin-top: $scale / 2;
 	
 		&#colophon {
 			font-family: $font-serif-semibold;
@@ -209,6 +208,7 @@ h2 {
 		}
 	
 	@include responsive (medium-screens){
+		margin-top: $scale / 2;
 		font-size: $base-font-size * 2;
 		line-height: $line-height-scale * 1.25;
 	}
@@ -284,7 +284,7 @@ blockquote, .intro {
 .blurb {
 	font-family: $font-sans;
 	text-align: center;
-	font-size: $base-font-size * 1.625;
+	font-size: $base-font-size * 1.375;
 	line-height: $line-height-scale * 1.15384615;
 	@include responsive (medium-screens){
 		font-size: $base-font-size * 2;
@@ -321,7 +321,7 @@ a {
 	&:hover {
 		color: $secondary-highlight;
 		border-bottom: 1px solid $secondary-highlight;
-		transition: all .2s ease;
+		transition: color .2s ease;
 		}
 }
 
@@ -351,16 +351,27 @@ p {
 	padding-bottom: $scale / 2;
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
-} 
+}
+
+article {
+	padding-bottom: $scale / 2;
+	@include responsive (medium-screens){
+		padding-bottom: 0;
+	}
+}
 
 input { margin-bottom: $scale;}
 
 .work {
 	font-family: $font-sans-bold;
-	line-height: $line-height-scale;
+	line-height: 1;
 	color: $secondary-color;
-	margin-top: $scale / 2;
+	margin: ($scale / 3) 0;
 	text-align: center;
+	@include responsive (medium-screens){
+		line-height: $line-height-scale;
+		margin-top: $scale / 2;
+	}
 }
 
 .work-pitch {
