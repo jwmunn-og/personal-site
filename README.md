@@ -1,7 +1,6 @@
 #[JustinWMunn.com](http://justinwmunn.com)
-=============
 
-The source for my [personal site](http://justinwmunn.com)
+###The source for my [personal site](http://justinwmunn.com)
 
 Notes for what I'd like to implement/improve in the not so distant future:
 
