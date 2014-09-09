@@ -1093,6 +1093,9 @@ img {
 figure {
   text-align: center; }
 
+figure a:hover {
+  text-decoration: none; }
+
 #personal-image {
   margin: 0 auto; }
 
@@ -1334,7 +1337,10 @@ input, textarea {
   border: none; }
 
 input {
-  width: 80%; }
+  width: 85%; }
+  @media only screen and (min-width: 48em) {
+    input {
+      width: 80%; } }
 
 textarea {
   width: 100%;
@@ -1356,7 +1362,7 @@ textarea {
   @media only screen and (min-width: 48em) {
     .button, .button-center {
       width: 11.55555em;
-      float: right; }
+      float: left; }
       .button:hover, .button-center:hover {
         background: #00cafc; }
       .button:active, .button-center:active {
@@ -1499,7 +1505,7 @@ form {
     max-width: 80%; }
     @media only screen and (max-width: 48em) {
       #about-image img {
-        max-width: 50%; } }
+        max-width: 80%; } }
 
 .pad-top {
   padding-top: 1.44444em; }
@@ -1556,6 +1562,9 @@ form {
 
 .homepage-heading {
   color: #00b7e4; }
+
+.full {
+  min-width: 100%; }
 
 .arrow-right, .arrow-left {
   font-size: inherit;

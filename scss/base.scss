@@ -56,6 +56,8 @@ img {max-width: 100%;}
 
 figure { text-align: center; }
 
+figure a:hover { text-decoration:none;}
+
 #personal-image {
 	margin: 0 auto;
 }
@@ -322,7 +324,10 @@ input, textarea {
 	border: none;
 }
 
-input { width: 80%;}
+input { 
+	width: 85%;
+	@include responsive (medium-screens){width: 80%;}
+	}
 
 textarea {
 	width: 100%;
@@ -342,7 +347,7 @@ textarea {
 	box-shadow:0px 4px 0px darken($primary-color, 20%);
 	@include responsive (medium-screens){
 		width: $scale * 8;
-		float: right;
+		float: left;
 		&:hover {
 			background: $primary-highlight;
 		}
@@ -510,7 +515,7 @@ form { display: block;}
 		display: block;
 		max-width: 80%;
 		@include responsive (small-screens) {
-			max-width: 50%;
+			max-width: 80%;
 		}
 	}
 }
@@ -581,6 +586,8 @@ form { display: block;}
 .homepage-heading {
 	color: $primary-color;
 }
+
+.full { min-width:100%;}
 
 .arrow-right, .arrow-left {
 	font-size: inherit;
