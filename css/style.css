@@ -752,15 +752,13 @@ h1, h2, .serif {
 
 h1 {
   font-size: 2.25rem;
-  line-height: 1.625; }
+  line-height: 0.975; }
   @media only screen and (min-width: 48em) {
     h1 {
-      font-size: 3.16688rem;
-      line-height: 1.4625; } }
+      font-size: 3.16688rem; } }
   @media only screen and (min-width: 68em) {
     h1 {
-      font-size: 3.375rem;
-      line-height: 1.365; } }
+      font-size: 3.375rem; } }
 
 h2 {
   font-family: "ProximaNovaA-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -967,7 +965,7 @@ input {
 
 #name {
   text-align: center;
-  margin-bottom: -0.36111em;
+  margin-bottom: -0.24074em;
   color: #f6871f; }
 
 #tagline {
@@ -1526,15 +1524,15 @@ form {
   font-family: "ProximaNovaA-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #415459;
-  font-size: 1.54688rem;
+  font-size: 1.40625rem;
   line-height: 1.47727; }
   @media only screen and (min-width: 48em) {
     .post-date {
-      font-size: 1.6875rem;
+      font-size: 1.40625rem;
       line-height: 1.625; } }
   @media only screen and (min-width: 68em) {
     .post-date {
-      font-size: 1.96875rem;
+      font-size: 1.40625rem;
       line-height: 1.625; } }
 
 .post-title {

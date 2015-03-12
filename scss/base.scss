@@ -544,14 +544,14 @@ form { display: block;}
 	font-family: $font-sans;
 	font-weight: normal;
 	color: $body-color;
-	font-size: $base-font-size * 1.375;
+	font-size: $base-font-size * 1.25;
 	line-height: $line-height-scale * 1.13636364;
 	@include responsive (medium-screens){
-		font-size: $base-font-size * 1.5;
+		font-size: $base-font-size * 1.25;
 		line-height: $line-height-scale * 1.25;
 	}
 	@include responsive (large-screens){
-		font-size: $base-font-size * 1.75;
+		font-size: $base-font-size * 1.25;
 		line-height: $line-height-scale * 1.25;
 	}
 }

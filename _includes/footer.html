@@ -34,32 +34,32 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="/js/jquery.fittext.js"></script>
 	<script>
+	//fitText Plugin
 	  jQuery("#name").fitText(.73, { maxFontSize: '150px' });
 	  jQuery("#tagline").fitText(1.225);
-	  jQuery(".thought-title").fitText(.9, { minFontSize: '36px', maxFontSize: '138px' });
+	  jQuery(".thought-title").fitText(.9, { minFontSize: '36px', maxFontSize: '86px' });
 	  jQuery(".project-title").fitText(1.225, { minFontSize: '36px' });
-	</script>
-	<script>
-		$(function() {
-			var pull 		= $('#pull');
-				menu 		= $('nav ul');
-				menuHeight	= menu.height();
-
-			$(pull).on('click', function(e) {
-				e.preventDefault();
-				menu.slideToggle();
-			});
-
-			$(window).resize(function(){
-        		var w = $(window).width();
-        		if(w > 320 && menu.is(':hidden')) {
-        			menu.removeAttr('style');
-        		}
-    		});
+	  
+	//Mobile Menu Toggle
+	$(document).ready(function() {
+		var pull 		= $('#pull');
+		menu 		= $('nav ul');
+		menuHeight	= menu.height();
+		
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
 		});
-	</script>
-	<script>
-	  var _gaq = _gaq || [];
+		$(window).resize(function(){
+    		var w = $(window).width();
+    		if(w > 320 && menu.is(':hidden')) {
+    			menu.removeAttr('style');
+    		}
+		});
+	});
+		
+	//Google Analytics
+	var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-37851689-1']);
 	  _gaq.push(['_trackPageview']);
 	
@@ -68,8 +68,6 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-	
 	</script>
-	
 </body>
 </html>
