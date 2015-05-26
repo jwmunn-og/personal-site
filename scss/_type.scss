@@ -1,0 +1,484 @@
+@import "variables";
+@import "mixins";
+/* ******************************************
+	Typographic scale (font-size x line-height): 1.125em x 1.625 = 1.828125 Round to 1.8
+	Scale = 1.8
+	3/4 scale = 1.35
+	1/2 scale = .9
+	1/4 scale = .45
+****************************************** */
+
+$font-sans: 'ProximaNovaA-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-sans-bold: 'ProximaNovaA-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'Bookmania-Regular', Georgia, serif;
+$font-serif-semibold: 'Bookmania-Semibold', Georgia, serif;
+
+em { font-family: 'Bookmania-RegularItalic', Georgia, serif; font-style: normal; }
+strong { font-family: $font-serif-semibold;}
+
+.test { font-family: 'Bookmania-SemiboldItalic', Georgia, serif; }
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?jq5axg');
+	src:url('../fonts/icomoon.eot?#iefixjq5axg') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?jq5axg') format('woff'),
+		url('../fonts/icomoon.ttf?jq5axg') format('truetype'),
+		url('../fonts/icomoon.svg?jq5axg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.caption {font-family: $font-sans; color: $neutral;}
+#blog-bio { color: $primary-color; }
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: $base-font-size * 2;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone {
+	color: $secondary-color;
+		&:before {
+		content: "\e600";
+	}
+}
+.icon-mail {
+	color: $light-color;
+		&:before {
+		content: "\e601";
+	}
+}
+.icon-twitter {
+	color: #00ACED;
+		&:before {
+		content: "\e603";
+	}
+}
+.icon-dribbble {
+	color: #EA4C89;
+		&:before {
+		content: "\e604";
+	}
+}
+.icon-github {
+	color: #444;
+		&:before {
+		content: "\e602";
+	}
+}
+.icon-linkedin {
+	color: #007FB1;
+		&:before {
+		content: "\e605";
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote {
+	margin: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	text-rendering: optimizeLegibility;
+}
+
+em {
+	@include opentype-style;
+}
+
+#footer-colophon {
+	font-family: $font-sans;
+	font-size: $base-font-size; /* 18px / 16px = 1.125em */
+	line-height: $line-height-scale * 1.25;
+}
+
+.footer-headline {
+	font-family: $font-serif;
+	@include opentype-style;
+}
+
+footer {
+	text-align: center;
+	@include responsive (medium-screens) { text-align: left; }
+}
+
+.line-break {
+	display: inline-block;
+}
+
+p, ul, input[type=text], input[type=email], textarea {
+	font-family: $font-serif;
+	font-size: $base-font-size; /* 18px / 16px = 1.125em */
+	line-height: $line-height-scale * 1.25; /* 26px / 18px = 1.444em | | Using typographic scale: font-size: 1.5 / 1.125 = 1.333334 */
+	color: $body-color;
+	margin-bottom: $scale/4;
+	@include responsive (medium-screens){
+		font-size: $base-font-size;
+		line-height: $line-height-scale * 1.375;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.25;
+		line-height: $line-height-scale * 1.375;
+	}
+	
+	@include opentype-style;
+	
+	&:after{margin: 0;}
+}
+
+label {
+	font-family: $font-sans-bold;
+	font-size: $base-font-size; /* 18px / 16px = 1.125em */
+	line-height: $line-height-scale * 1.25; /* 26px / 18px = 1.444em | | Using typographic scale: font-size: 1.5 / 1.125 = 1.333334 */
+	color: $body-color;
+	margin-bottom: $scale/4;
+	@include responsive (medium-screens){
+		font-size: $base-font-size;
+		line-height: $line-height-scale * 1.375;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.25;
+		line-height: $line-height-scale * 1.375;
+	}
+}
+
+::-webkit-input-placeholder {
+   color: $neutral;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color:  $neutral;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:  $neutral;  
+}
+
+:-ms-input-placeholder {  
+   color:  $neutral;  
+}
+
+h1, h2, .serif {
+	font-family: $font-serif-semibold;
+	font-weight: normal;
+	color: $secondary-color;
+	@include opentype-style;
+}
+
+h1 {
+	font-size: $base-font-size * 2;
+	line-height: $line-height-scale * .75;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 2.815;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 3;
+		
+	}
+}
+
+h2 {
+	font-family: $font-sans-bold;
+	font-size: $base-font-size * 1.625;
+	line-height: $line-height-scale * 1.15384615;
+	
+		&#colophon {
+			font-family: $font-serif-semibold;
+			&:first-letter {
+				-moz-font-feature-settings:"salt" 1; 
+				-moz-font-feature-settings:"salt=1"; 
+				-ms-font-feature-settings:"salt" 1; 
+				-o-font-feature-settings:"salt" 1; 
+				-webkit-font-feature-settings:"salt" 1; 
+				font-feature-settings:"salt" 1;
+			}
+		}
+	
+	@include responsive (medium-screens){
+		margin-top: $scale / 2;
+		font-size: $base-font-size * 2;
+		line-height: $line-height-scale * 1.25;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 2.25;
+		line-height: $line-height-scale * 1.25;
+	}
+}
+
+h3 {
+	font-family: $font-sans-bold;
+	font-size: $base-font-size * 1.375;
+	line-height: $line-height-scale * 1.13636364;
+	color: $body-color;
+	font-weight: normal;
+	margin:0;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 1.5;
+		line-height: $line-height-scale * 1.25;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.75;
+		line-height: $line-height-scale * 1.25;
+	}
+}
+
+h4 {
+	font-family: $font-sans;
+	font-weight: normal;
+	color: $secondary-color;
+	display: block;
+	font-size: $base-font-size * 1.125;
+	line-height: $line-height-scale * 1.11111111;
+	text-align: center;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 1.125;
+		line-height: $line-height-scale * 1.22222222;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.125;
+		line-height: $line-height-scale * 1.22222222;
+	}
+}
+
+blockquote, .intro {
+	font-family: $font-sans-bold;
+	font-size: $base-font-size * 1.25;
+	line-height: $line-height-scale *1.25;
+	color: $body-color;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 1.25;
+		line-height: $line-height-scale * 1.25;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.5;
+		line-height: $line-height-scale * 1.45833333;
+	}
+}
+
+.page-title {
+	font-size: $base-font-size * 2.5;
+	line-height: $line-height-scale * 1.25;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 3.565;
+		line-height: $line-height-scale * 1.125;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 4;
+		line-height: $line-height-scale * 1.25;
+	}
+}
+
+.blurb {
+	font-family: $font-sans;
+	text-align: center;
+	font-size: $base-font-size * 1.375;
+	line-height: $line-height-scale * 1.15384615;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 2;
+		line-height: $line-height-scale * 1.25;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 2.25;
+		line-height: $line-height-scale * 1.25;
+	}
+}
+
+blockquote p {
+	font-family: $font-sans;
+	font-size: $base-font-size * 1.25;
+	line-height: $line-height-scale * 1.125;
+	color: $primary-color;
+	padding-left: $scale / 2;
+	padding-bottom: 0;
+	margin-bottom: ($scale / 2);
+	border-left: 6px solid $primary-color;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 1.5;
+		line-height: $line-height-scale * 1.45833333;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.5;
+		line-height: $line-height-scale * 1.45833333;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $secondary-color;
+	&:hover {
+		color: $secondary-highlight;
+		border-bottom: 1px solid $secondary-highlight;
+		transition: color .2s ease;
+		}
+}
+
+li a, figure a { border: none;}
+
+.elevator-pitch {
+	font-size: $base-font-size * 1.625;
+	line-height: $line-height-scale * 1.15384615;
+	text-align: center;
+	@include responsive (medium-screens){
+		font-size: $base-font-size * 1.5;
+		line-height: $line-height-scale * 1.25;
+		width: 90%;
+		margin: 0 auto;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size * 1.75;
+		line-height: $line-height-scale * 1.25;
+		width:80%;
+		margin: 0 auto;
+	}
+}
+
+/* -------------------------------------------- */
+
+p {
+	padding-bottom: $scale / 2;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+article {
+	padding-bottom: $scale / 2;
+	@include responsive (medium-screens){
+		padding-bottom: 0;
+	}
+}
+
+input { margin-bottom: $scale;}
+
+.work {
+	font-family: $font-sans-bold;
+	line-height: 1;
+	color: $secondary-color;
+	margin: ($scale / 3) 0;
+	text-align: center;
+	@include responsive (medium-screens){
+		line-height: $line-height-scale;
+		margin-top: $scale / 2;
+	}
+}
+
+.work-pitch {
+	text-align: center;
+	@include responsive (medium-screens){
+		width: 90%;
+		margin: 0 auto;
+	}
+	@include responsive (large-screens){
+		width:80%;
+		margin: 0 auto;
+	}
+}
+
+.work-pitch-secondary {
+	font-family: $font-sans;
+	color: $neutral;
+	@include responsive (medium-screens){
+		width: 70%;
+		margin: 0 auto;
+	}
+	@include responsive (large-screens){
+		width:70%;
+		margin: 0 auto;
+	}
+}
+
+#tagline {
+	font-size: $base-font-size * 1.5;
+	line-height: 1.35;
+	text-align: center;
+	@include opentype-style;
+	color: $neutral;
+}
+
+#name {
+	text-align: center;
+	margin-bottom: -$scale / 6;
+	color: $secondary-color;
+}
+
+#tagline {
+	font-family: $font-serif-semibold;
+	line-height: $line-height-scale;
+	@include opentype-style;
+	padding-right: $scale / 3;
+	text-align:right;
+	margin-top: 0;
+	padding-top: 0;
+	-webkit-animation-delay: .2s;
+}
+
+.footer-text {
+	font-family: $font-sans;
+	line-height: 1.35;
+	font-size: $base-font-size *.75;
+	padding-top: $scale / 2;
+	@include responsive (medium-screens){
+		font-size: $base-font-size;
+		padding-top: 0;
+	}
+	@include responsive (large-screens){
+		font-size: $base-font-size;
+	}
+}
+
+.swash {
+	-moz-font-feature-settings:"swsh" 1; 
+	-moz-font-feature-settings:"swsh=1"; 
+	-ms-font-feature-settings:"swsh" 1; 
+	-o-font-feature-settings:"swsh" 1; 
+	-webkit-font-feature-settings:"swsh" 1; 
+	font-feature-settings:"swsh" 1;
+}
+
+.dlig {
+	-moz-font-feature-settings:"dlig" 1; 
+	-moz-font-feature-settings:"dlig=1"; 
+	-ms-font-feature-settings:"dlig" 1; 
+	-o-font-feature-settings:"dlig" 1; 
+	-webkit-font-feature-settings:"dlig" 1; 
+	font-feature-settings:"dlig" 1;
+}
+
+.salt {
+	-moz-font-feature-settings:"salt" 1; 
+	-moz-font-feature-settings:"salt=1"; 
+	-ms-font-feature-settings:"salt" 1; 
+	-o-font-feature-settings:"salt" 1; 
+	-webkit-font-feature-settings:"salt" 1; 
+	font-feature-settings:"salt" 1;
+}
+
+.swsh-salt {
+	-moz-font-feature-settings:"swsh" 1, "salt" 1, "ss04" 1; 
+	-moz-font-feature-settings:"swsh=1, salt=1, ss04=1"; 
+	-ms-font-feature-settings:"swsh" 1, "salt" 1, "ss04" 1; 
+	-o-font-feature-settings:"swsh" 1, "salt" 1, "ss04" 1; 
+	-webkit-font-feature-settings:"swsh" 1, "salt" 1, "ss04" 1; 
+	font-feature-settings:"swsh" 1, "salt" 1, "ss04" 1;
+}
+
+.th-lig {
+	-moz-font-feature-settings:"dlig" 1, "salt" 1; 
+	-moz-font-feature-settings:"dlig=1, salt=1"; 
+	-ms-font-feature-settings:"dlig" 1, "salt" 1; 
+	-o-font-feature-settings:"dlig" 1, "salt" 1; 
+	-webkit-font-feature-settings:"dlig" 1, "salt" 1; 
+	font-feature-settings:"dlig" 1, "salt" 1;
+}
+
+.text-center {
+	text-align: center;
+}

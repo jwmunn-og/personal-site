@@ -1,0 +1,61 @@
+$small-breakpoint: 48em;
+$medium-breakpoint: 68em;
+$large-maxwidth: 80em;
+
+@mixin responsive($width) {
+	@if $width == small-screens {
+		@media only screen and (max-width: $small-breakpoint){@content;}
+	}
+	@else if $width == medium-screens {
+		@media only screen and (min-width: $small-breakpoint){@content;}
+	}
+	@else if $width == large-screens {
+		@media only screen and (min-width: $medium-breakpoint){@content;}
+	}
+}
+
+@mixin rounded($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	   -mox-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+/* TRANSITION */
+@mixin transition($what: all, $length: .2s, $easing: ease-in-out) {
+    -moz-transition:    $what $length $easing;
+    -o-transition:      $what $length $easing;
+    -webkit-transition: $what $length $easing;
+    -ms-transition:     $what $length $easing;
+    transition:         $what $length $easing;
+
+}
+
+/* OPACITY */
+@mixin opacity($opacity: 0.5) {
+    filter:         alpha(opacity=($opacity * 100));
+    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($opacity * 100) + ")";
+    -moz-opacity:   $opacity;
+    -khtml-opacity: $opacity;
+    opacity:        $opacity;
+}
+
+@mixin transform($params) {
+    -webkit-transform: $params;
+    -moz-transform:    $params;
+    transform:         $params;
+}
+
+@mixin opentype-style {
+	-moz-font-feature-settings:"ss01" 1, "ss02" 1, "ss04" 1; 
+	-moz-font-feature-settings:"ss01=1, ss02=1, ss04=1"; 
+	-ms-font-feature-settings:"ss01" 1, "ss02" 1, "ss04" 1; 
+	-o-font-feature-settings:"ss01" 1, "ss02" 1, "ss04" 1; 
+	-webkit-font-feature-settings:"ss01" 1, "ss02" 1, "ss04" 1; 
+	font-feature-settings:"ss01" 1, "ss02" 1, "ss04" 1;
+}
